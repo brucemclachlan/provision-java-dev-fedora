@@ -3,12 +3,11 @@
 # Install wget on Fedora
 #
 # Arguments:
-# (None)		
+# (None)
 #
 # Version: 1.0.0
 # Date: 03-July-2014
 # Author: Dave Nicolette
 #======================================================================================
 
-sudo yum -y install wget
-
+sudo dnf -y install wget

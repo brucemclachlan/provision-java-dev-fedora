@@ -3,12 +3,11 @@
 # Apply system updates - Fedora
 #
 # Arguments:
-# (None)		
+# (None)
 #
 # Version: 1.0.0
 # Date: 03-July-2014
 # Author: Dave Nicolette
 #======================================================================================
 
-sudo yum update
-
+sudo dnf update

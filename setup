@@ -3,7 +3,7 @@
 # Configure an instance of Fedora Linux to support Java development.
 #
 # Arguments:
-# (None)		
+# (None)
 #
 # Version: 1.0.0
 # Date: 16 Jul 2014
@@ -13,7 +13,7 @@ export INSTALL_DIR="$HOME/provision-java-dev-fedora"
 export COMMON_DIR="provision-fedora-common"
 
 mkdir -p bin
-git clone "git://github.com/neopragma/$COMMON_DIR"
+git clone "git://github.com/brucemclachlan/$COMMON_DIR"
 
 echo
 echo '============================================================='
@@ -25,16 +25,16 @@ echo '============================================================='
 echo 'Installing general utilities...'
 "./$COMMON_DIR/install_wget"
 
-echo
-echo '============================================================='
-echo 'Installing Sublime Text 3...'
-"./$COMMON_DIR/install_sublime_text_3"
+# echo
+# echo '============================================================='
+# echo 'Installing Sublime Text 3...'
+# "./$COMMON_DIR/install_sublime_text_3"
 
-echo
-echo '============================================================='
-echo 'Installing Microsoft TrueType fonts...'
+# echo
+# echo '============================================================='
+# echo 'Installing Microsoft TrueType fonts...'
 
-"./$COMMON_DIR/install_msttcorefonts"
+# "./$COMMON_DIR/install_msttcorefonts"
 
 echo
 echo '============================================================='
@@ -52,13 +52,13 @@ echo 'Installing Maven...'
 # =============================================================
 # Installing Eclipse...
 
-"./$COMMON_DIR/install_eclipse_kepler"
+# "./$COMMON_DIR/install_eclipse_kepler"
 
-echo
-echo '============================================================='
-echo 'Installing RVM, Ruby, and Bundler...'
+# echo
+# echo '============================================================='
+# echo 'Installing RVM, Ruby, and Bundler...'
 
-"./$COMMON_DIR/install_rvm"
+# "./$COMMON_DIR/install_rvm"
 
 echo
 echo '============================================================='
@@ -69,5 +69,3 @@ cp -f java-background.png "$HOME/.backgrounds/."
 gsettings set org.gnome.desktop.background picture-uri file:///home/neopragma/.backgrounds/java-background.png
 
 ./verify
-
-

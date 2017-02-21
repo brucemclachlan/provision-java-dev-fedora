@@ -3,7 +3,7 @@
 # See if this instance appears to have everything installed as expected.
 # This is for provision-java-dev-training-vm-fedora.
 #
-# Version: 1.1.0 
+# Version: 1.1.0
 # Date: 16 Jul 2014
 # Author: Dave Nicolette
 #===============================================================================
@@ -21,33 +21,33 @@ pkg[${#pkg[@]}]='java-1.7.0-openjdk'
 
 for name in "${pkg[@]}"
 do
-  if [[ -n "$(yum list ${name})" ]]; then 
+  if [[ -n "$(yum list ${name})" ]]; then
       echo "package ${name} is installed"
   else
       echo "package ${name} was expected but is not installed - ERROR"
       errors="${errors}+1"
-  fi 
+  fi
 done
 
-declare -a app
-app[${#app[@]}]="/usr/bin/eclipse"
+# declare -a app
+# app[${#app[@]}]="/usr/bin/eclipse"
 
-for name in "${app[@]}"
-do
-  if [[ -e "${name}" ]]; then 
-      echo "${name} is present"
-  else
-      echo "${name} was expected but is not installed - ERROR"
-      errors="${errors}+1"
-  fi 
-done
+# for name in "${app[@]}"
+# do
+#  if [[ -e "${name}" ]]; then
+#      echo "${name} is present"
+#  else
+#      echo "${name} was expected but is not installed - ERROR"
+#      errors="${errors}+1"
+#  fi
+# done
 
-source "$HOME/.rvm/scripts/rvm"
-if [[ "$(rvm --version)" ]]; then
-    echo "$(rvm current) is installed with rvm"
-else
-    echo "rvm expected but is not installed - ERROR"
-    errors="${errors}+1"
-fi
+# source "$HOME/.rvm/scripts/rvm"
+# if [[ "$(rvm --version)" ]]; then
+#    echo "$(rvm current) is installed with rvm"
+# else
+#    echo "rvm expected but is not installed - ERROR"
+#    errors="${errors}+1"
+# fi
 
-test "${errors}" -eq 0 && echo "...configuration is as expected." || echo "...${errors} expected package(s) or application(s) not found! Configuration may not function as desired." 
+test "${errors}" -eq 0 && echo "...configuration is as expected." || echo "...${errors} expected package(s) or application(s) not found! Configuration may not function as desired."

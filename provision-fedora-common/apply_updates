@@ -10,4 +10,4 @@
 # Author: Dave Nicolette
 #======================================================================================
 
-sudo dnf update
+sudo dnf update -y
